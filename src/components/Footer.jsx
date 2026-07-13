@@ -12,7 +12,7 @@ function Footer() {
         </div>
         <div className="mt-2 text-sm flex flex-col gap-3 md:gap-5">
           <p className="text-[#6B7280]">Rain or Shine, We've got you</p>
-          <p className="text-[#6B7280]">Made with by Raja❤️ using React & Weather API</p>
+          <p className="text-[#6B7280]">Made by Raja❤️ using React & Weather API</p>
           <p className="text-[#6B7280]">© 2026 Sky Cast. All Rights Reserved.</p>
         </div>
       </div>
