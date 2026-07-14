@@ -50,7 +50,7 @@ function Navbar({ setWeatherData }) {
         </h1>
         <div className="flex items-center gap-3 w-[80%]">
           <input
-            placeholder="Enter you city name"
+            placeholder="Enter your city name"
             type="text"
             value={city}
             onChange={handlecity}
