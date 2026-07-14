@@ -34,7 +34,6 @@ function Navbar({ setWeatherData }) {
       })
       .catch((error) => {
         setLoading(false);
-        setWeatherData(null);
 
         if (error.response?.status === 404) {
           setError("City not found");
