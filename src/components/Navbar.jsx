@@ -15,18 +15,21 @@ function Navbar({ setWeatherData }) {
       return;
     }
 
+    const formattedCity = city.trim().replace(/\s+/g, " ");
+
     setLoading(true);
     setError("");
 
     const API_KEY = "57ec36bc1c566aa50d33f9df33ee1099";
     var weather = axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${formattedCity}&appid=${API_KEY}&units=metric`,
     );
     weather
       .then((success) => {
         setTimeout(() => {
           setWeatherData(success.data);
           setLoading(false);
+          setCity("");
         }, 3000);
       })
       .catch((error) => {
@@ -43,7 +46,7 @@ function Navbar({ setWeatherData }) {
   return (
     <>
       <div className="text-center mt-5 flex flex-col gap-5 items-center md:mt-20">
-        <h1 className="text-xl md:text-3xl">
+        <h1 className="text-xl text-gray-700 md:text-3xl">
           Search your city for real-time weather
         </h1>
         <div className="flex items-center gap-3 w-[80%]">
